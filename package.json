@@ -1,0 +1,17 @@
+{
+  "name": "net-record",
+  "version": "0.3.0",
+  "description": "access raw audio streams over the network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": ["audio", "network", "leon"],
+  "author": "Keyvan Fatehi",
+  "license": "MIT",
+  "dependencies": {
+    "node-record-lpcm16": "^0.3.0"
+  },
+  "bin": "./bin.js"
+}
