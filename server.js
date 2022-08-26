@@ -13,7 +13,7 @@
 const net = require('node:net');
 const record = require('node-record-lpcm16')
 
-const listenPort = process.env.PORT || 8924
+const listenPort = process.env.PORT || process.env.NETRECORD_PORT || 8924
 
 let mic = null;
 

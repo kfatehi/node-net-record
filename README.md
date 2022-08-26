@@ -13,6 +13,14 @@ the microphone library.
 
 ### Instructions
 
+Start the microphone server with `npx net-record`
+
+You may specify the server with the environment variable PORT, e.g.:
+
+`PORT=7777 npx net-record`
+
+To use the client, we will use the Leon hotword example, relevant as of 1.0.0+beta7.
+
 Open `hotword/index.js`
 
 Change the line that says:
@@ -27,24 +35,15 @@ to this:
 const record = require('net-record')
 ```
 
-Be sure to install the dependency by doing an `npm install net-record` in the hotword folder.
-
-When you run `node hotword/index.js`, specify these environment variables:
+Be sure to install this module so you can use the client:
 
 ```
-NETRECORD_HOST=
-NETRECORD_PORT=
+npm install net-record
 ```
 
-So you will be running it like this:
+When you run `node hotword/index.js`, you can use the environment variables to indicate where to connect to the server
 
 ```
-NETRECORD_HOST=192.168.1.2 NETRECORD_PORT=7777
+NETRECORD_HOST=192.168.1.2 NETRECORD_PORT=7777 node hotword/index.js
 ```
-
-3. Start the microphone server with `npx net-record`
-
-You may specify the server with the environment variable PORT, e.g.:
-
-`PORT=7777 npx net-record`
 

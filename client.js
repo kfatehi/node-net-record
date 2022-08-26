@@ -2,8 +2,8 @@ const { Transform } = require('stream')
 const net = require('node:net');
 
 const connectOpts = {
-  host: process.env.HOST,
-  port: process.env.PORT
+  host: process.env.HOST || process.env.NETRECORD_HOST,
+  port: process.env.PORT || process.env.NETRECORD_PORT || 8924
 };
 
 // This is a reconnecting remote microphone.
